@@ -5,6 +5,7 @@
 }
 
 .div-container {
+    padding: 5rem;
     margin: 5rem auto;
     width: 50%;
     display: flex;
