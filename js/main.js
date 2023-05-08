@@ -5,10 +5,9 @@ createApp({
         return {
             heading: 'Hello World!',
             classiContainer: 'div-container',
-            image: {
-                source: 'https://picsum.photos/200',
-                altTxt: "Immagine random presa da Picsum"
-            },
+            currentImg: 0,
+            urls: ['https://picsum.photos/200?random=1', 'https://picsum.photos/200?random=2', 'https://picsum.photos/200?random=3', 'https://picsum.photos/200?random=4'],
+            altTxt: "Immagine random presa da Picsum",
             bgColor: "",
             inputCaption: ""
         }
@@ -24,7 +23,14 @@ createApp({
         },
         // metodo per cambiare la caption dell'immagine
         changeCaption() {
-            this.image.altTxt = this.inputCaption;
+            this.altTxt = this.inputCaption;
+        },
+        generateSrc() {
+            return this.urls[this.currentImg]
+        },
+        changeImg() {
+            this.currentImg == 3 ? this.currentImg = 0 : null;
+            this.currentImg++
         }
     }
 }).mount('#app')

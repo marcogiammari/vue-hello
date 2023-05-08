@@ -13,9 +13,12 @@
         <div id="container" :class="classiContainer" :style="bgColor">
             <h1>{{heading}}</h1>
             <figure>
-                <img :src="image.source" :alt="image.altTxt">
-                <figcaption>{{image.altTxt}}</figcaption>
+                <img :src="generateSrc()" :alt="altTxt">
+                <figcaption>{{altTxt}}</figcaption>
             </figure>
+            <div>
+                <button @click="changeImg">Cambia immagine</button>  
+            </div>
             <div>
                 <label>Inserisci un nuovo titolo</label><br>
                 <input v-model="heading" type="text">              
