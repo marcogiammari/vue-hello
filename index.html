@@ -21,10 +21,13 @@
                 <input v-model="heading" type="text">              
             </div>
             <div>
-                
                 <button @click="changeColor">Cambia colore</button>  
             </div>
-
+            <div>
+                <label>Testo della caption</label><br>
+                <input v-model="inputCaption" type="text">
+                <button @click="changeCaption">Cambia caption</button>  
+            </div>
         </div> 
     </div>
     <script src="js/main.js"></script>
