@@ -4,7 +4,12 @@ createApp({
     data() {
         return {
             heading: 'Hello World!',
-            source: 'https://picsum.photos/200'
+            classiContainer: 'div-container',
+            image: {
+                source: 'https://picsum.photos/200',
+                altTxt: "Immagine random presa da Picsum"
+        }
+
         }
     }
 }).mount('#app')

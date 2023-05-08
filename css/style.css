@@ -3,3 +3,13 @@
     padding: 0;
     margin: 0;
 }
+
+.div-container {
+    margin: 5rem auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    justify-content: center;
+}
