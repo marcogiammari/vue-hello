@@ -10,12 +10,21 @@
 </head>
 <body>
     <div id="app">
-        <div id="container" :class="classiContainer">
+        <div id="container" :class="classiContainer" :style="bgColor">
             <h1>{{heading}}</h1>
             <figure>
                 <img :src="image.source" :alt="image.altTxt">
                 <figcaption>{{image.altTxt}}</figcaption>
             </figure>
+            <div>
+                <label>Inserisci un nuovo titolo</label><br>
+                <input v-model="heading" type="text">              
+            </div>
+            <div>
+                
+                <button @click="changeColor">Cambia colore</button>  
+            </div>
+
         </div> 
     </div>
     <script src="js/main.js"></script>
